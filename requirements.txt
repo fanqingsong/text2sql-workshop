@@ -1,4 +1,4 @@
-polars
+polars-lts-cpu
 ipykernel
 sqlalchemy
 psycopg2-binary

@@ -8,8 +8,10 @@ import pydantic
 
 class Text2SQL(BaseModel):
 
-    uri: str = "postgresql://postgres:postgres@localhost:5432"
-    model: str = "gpt-4-1106-preview"
+    uri: str = "postgresql://postgres:changeme@localhost:5432"
+    # model: str = "gpt-4-1106-preview"
+    model: str = "internlm/internlm2_5-7b-chat-gguf/internlm2_5-7b-chat-q2_k.gguf"
+    
     temperature: int = 0
 
     class Config:
@@ -25,7 +27,9 @@ class Text2SQL(BaseModel):
     def llm(self) -> ChatOpenAI:
         return ChatOpenAI(
             model = self.model,
-            temperature = self.temperature
+            temperature = self.temperature,
+            api_key="...",  
+            base_url="http://192.168.0.108:1234/v1/",
         )
     
     @pydantic.computed_field()
