@@ -13,7 +13,9 @@ def main():
 
     connection = "postgresql://postgres:changeme@localhost:5432"
 
-    for csv_file in tqdm.tqdm(glob.glob("../data/*.csv")):
+    for csv_file in tqdm.tqdm(glob.glob("../../data/*.csv")):
+        print(f'csv_file == {csv_file}')
+
         logging.info(f'csv_file == {csv_file}')
 
         table_name = re.search("(?<=\/)[a-z]+(?=\.)", csv_file)[0]

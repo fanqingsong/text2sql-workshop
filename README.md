@@ -16,7 +16,25 @@
 * Create a virtual environment with your tool of choice and install the **text2sql** Python package
 * Once the package is installed, you can create an IPython kernel and use it in Jupyter - checkout the notebooks provided in the `sandbox` folder.
 
+Firstly, install uv by the below link:
+https://docs.astral.sh/uv/
+
+then run such following command to install dependency
+
+```console
+uv venv --python=python3.9
+
+source .venv/bin/activate
+
+uv pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple -r requirements.txt
+```
+
 #### Example
+
+```console
+
+```
+
 
 ```python
 from text2sql.core import Text2SQL

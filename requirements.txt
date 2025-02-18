@@ -8,3 +8,5 @@ pandas
 tqdm
 langchain
 openai
+langchain_community
+pydantic
