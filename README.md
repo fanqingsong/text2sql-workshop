@@ -31,8 +31,10 @@ uv pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple -r requir
 
 #### Example
 
-```console
+RUN TEST FILE
 
+```console
+ python text2sql/test.py
 ```
 
 
